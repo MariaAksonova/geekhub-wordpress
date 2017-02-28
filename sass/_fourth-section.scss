@@ -1,0 +1,39 @@
+@import "variables";
+
+.clients {
+  //margin: 0 auto;
+  list-style: none;
+  padding-bottom: 40px;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  .client {
+    display: inline-block;
+    //margin-right: 12px;
+    height: 65px;
+    width: 140px;
+    background: url("../images/clients.png") no-repeat;
+    margin-bottom: 12px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+@for $i from 0 to 8 {
+
+  $step : -140px;
+
+  .clients {
+
+    > .client:nth-child(#{$i + 1}) {
+
+      background-position: ($step * $i) 0;
+    }
+  }
+}
+
+

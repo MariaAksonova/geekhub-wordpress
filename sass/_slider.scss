@@ -1,0 +1,26 @@
+@import "variables";
+
+.carousel-item img{
+  margin: 0 auto;
+  width: 717px;
+}
+
+
+.carousel-indicators {
+  bottom: -46px;
+  margin-right: 83%;
+  margin-left: -30px;
+
+  li {
+    max-width: 20px;
+    height: 20px;
+    margin-right: 2px;
+    margin-left: 2px;
+    background-color: $grey-color;
+    border: 3px solid $grey-color;
+  }
+}
+
+.carousel-indicators .active {
+  background-color: $yellow-color;
+}

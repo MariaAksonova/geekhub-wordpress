@@ -1,0 +1,22 @@
+{
+  "name": "lesson 14",
+  "authors": [
+    "Maria Aksonova <mashaaks@ukr.net>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.6",
+    "masonry": "^4.1.1"
+  }
+}

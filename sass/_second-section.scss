@@ -1,0 +1,125 @@
+@import "variables";
+
+.about-us {
+  text-align: center;
+  padding-top: 84px;
+
+  h3 {
+    font-family: "CenturyGothic", sans-serif;
+    font-size: 35px;
+    line-height: 36px;
+    color: $grey-color;
+    text-transform: uppercase;
+    margin-bottom: 26px;
+  }
+}
+
+.about-us-list {
+  width: 100%;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  li {
+    height: 285px;
+    width: 250px;
+    display: inline-block;
+    margin-bottom: 80px;
+
+    &:hover .yellow-section {
+      background: url("../images/bog-post-img.png") no-repeat;
+
+      h5 {
+        display: none;
+      }
+    }
+
+    &:hover .gray-section {
+      flex-direction: column;
+      justify-content: space-around;
+
+      >p {
+        display: none;
+      }
+
+      div {
+        display: block;
+        width: 209px;
+      }
+
+      h5 {
+        color: #fff;
+      }
+
+      &:before {
+        display: block;
+      }
+    }
+
+    .yellow-section {
+      height: 66%;
+      transition: .5s;
+
+      h5 {
+        padding-top: 156px;
+      }
+    }
+
+    .gray-section {
+      height: 34%;
+      background-color: $grey-color;
+      display: flex;
+      align-items: center;
+      position: relative;
+      transition: .5s;
+
+      &:before {
+        content: '';
+        background: url("../images/corner.png") no-repeat;
+        position: absolute;
+        left: 80%;
+        top: -11px;
+        height: 22px;
+        width: 22px;
+        display: none;
+      }
+
+      .about-us-hov {
+        display: none;
+      }
+    }
+  }
+
+  h5 {
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+
+  .redesigning {
+    background: url("../images/web-design-icon.png") 50% 20% no-repeat;
+    background-color: $yellow-color;
+  }
+
+  .web-development {
+    background: url("../images/web-development.png") 50% 20% no-repeat;
+    background-color: $yellow-color;
+  }
+
+  .web-design {
+    background: url("../images/web-design-icon.png") 50% 20% no-repeat;
+    background-color: $yellow-color;
+  }
+
+  .graphic-design {
+    background: url("../images/graphic-design-icon.png") 50% 20% no-repeat;
+    background-color: $yellow-color;
+  }
+}
+
+
+@media (max-width: 546px) {
+  .about-us-list {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,161 @@
+@import "variables";
+
+.main-footer {
+  background-color: $grey-color;
+  color: #fff;
+  font-size: 13px;
+  line-height: 21px;
+  padding: 28px 0;
+
+  &>.container {
+    display: flex;
+  }
+
+  h4 {
+    margin-bottom: 20px;
+  }
+}
+
+.photo-stream {
+  margin-top: 40px;
+
+  img {
+    margin-right: 4px;
+    margin-bottom: 8px;
+  }
+}
+
+.tweets {
+  padding-left: 0;
+
+  li {
+    padding-left: 40px;
+    background: url("../images/twitter-birs-icon.png") 0 30% no-repeat;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .smaller-text {
+    margin-bottom: 22px;
+  }
+}
+
+.socials {
+  padding: 0;
+  margin: 0;
+
+  li {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    background: url("../images/social.png") no-repeat;
+  }
+}
+
+@for $i from 0 to 8 {
+
+  $step : -30px;
+
+  .socials {
+
+    > .social:nth-child(#{$i + 1}) {
+
+      background-position: ($step * $i) 0;
+    }
+  }
+}
+
+.contact-info {
+
+  .contact {
+    padding-left: 0;
+
+    li {
+      padding-left: 40px;
+      min-height: 30px;
+    }
+
+    .address {
+      background: url("../images/adress.png") 0 30% no-repeat;
+    }
+
+    .phone {
+      background: url("../images/phone.png") 0 30% no-repeat;
+    }
+
+    .email {
+      background: url("../images/email.png") 0 30% no-repeat;
+      margin-bottom: 40px;
+    }
+  }
+
+  input, input:focus {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid $yellow-color;
+    border-radius: 0;
+    color: #fff;
+    transition: .3s;
+  }
+
+  input:focus {
+    background-color: rgb(153,153,0);
+  }
+
+  .submit-btn {
+    width: 28px;
+    height: 28px;
+    background: url("../images/email-icon.png") no-repeat;
+    border: none;
+    transform: translateY(14px);
+  }
+}
+
+.footer-nav>.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-nav {
+  background-color: #000;
+  padding: 22px 0;
+
+  p {
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+  .nav-pills .nav-link.active {
+    color: $light-grey-color;
+    background-color: transparent;
+  }
+
+  .nav-pills .nav-link {
+    border-radius: 0;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 0;
+    color: #fff;
+    font-size: 16px;
+    margin-left: 28px;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $light-grey-color
+    }
+  }
+}
+
+@media (max-width: 738px) {
+  .footer-nav>.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

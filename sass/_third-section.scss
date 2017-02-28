@@ -1,0 +1,28 @@
+@import "variables";
+
+.our-work {
+  padding-bottom: 80px;
+
+  p {
+    margin-bottom: 20px;
+  }
+}
+
+.grid-item {
+  width: 260px;
+  border: 2px solid transparent;
+}
+
+.grid-item--width2 {
+  width: 520px;
+}
+
+.wrapper {
+  margin: 0 auto;
+}
+
+@media (max-width: 575px) {
+  .grid-item--width2 {
+    width: 260px;
+  }
+}
