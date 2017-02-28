@@ -632,7 +632,7 @@
   flex-wrap: wrap;
   height: 100%;
   font-size: 16px; }
-.single-post .nav-links, .single-post .entry-footer, .single-post #email-notes, .single-post .comment-notes, .single-post .comment-form-url, .single-post label {
+.single-post .nav-links, .single-post .entry-footer, .single-post #email-notes, .single-post .comment-notes, .single-post .comment-form-url {
   display: none; }
 
 body {
