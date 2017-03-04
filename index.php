@@ -15,13 +15,14 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main " role="main">
+			<div class="main-posts">
 
-			<div class="cite">
-				<cite>"Ability may get you to the top, but it takes
-					character to keep you there."</cite>
-				<p>John Wooden</p>
-			</div>
+				<div class="cite">
+					<cite>"Ability may get you to the top, but it takes
+						character to keep you there."</cite>
+					<p>John Wooden</p>
+				</div>
 
 		<?php
 		if ( have_posts() ) :
@@ -46,13 +47,15 @@ get_header(); ?>
 
 			endwhile;
 
-			the_posts_navigation();
-
 		else :
 
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif; ?>
+
+			</div>
+
+			<?php the_posts_pagination(['mid_size' => 2, 'prev_text' => 'Prev', 'next_text' => 'Next']);  ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

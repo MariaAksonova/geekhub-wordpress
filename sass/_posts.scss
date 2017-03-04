@@ -21,18 +21,13 @@
   }
 }
 
-.site-main {
-  flex-direction: column;
-  flex-wrap: wrap;
-  height: 180vw;
-  font-size: 0;
-  width: 100%;
-}
-
 .blog {
-  .site-main {
+  .main-posts {
     display: flex;
     flex-wrap: wrap;
+    height: 180vw;
+    width: 100%;
+    flex-direction: column;
 
     .cite {
       margin: 15px;
@@ -102,5 +97,41 @@
     .cat-links, .tags-links, .comments-link, .post-edit-link, .more-link {
       display: none;
     }
+  }
+}
+
+.pagination {
+  .nav-links {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    font-size: 20px;
+    font-family: $font-main;
+    color: #000;
+    margin-bottom: 60px;
+    font-weight: bold;
+
+    .next {
+      position: absolute;
+      right: 0;
+    }
+
+    .prev {
+      position: absolute;
+      left: 0;
+    }
+  }
+
+  .current {
+    background-color: $yellow-color;
+  }
+
+  .page-numbers {
+    margin: 0 2px;
+    padding: 6px 10px;
+  }
+
+  a {
+    color: #000;
   }
 }

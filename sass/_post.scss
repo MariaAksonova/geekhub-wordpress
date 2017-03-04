@@ -67,6 +67,10 @@
       float: right;
       margin-bottom: 60px;
     }
+
+    .btn:hover {
+      background-color: $yellow-color;
+    }
   }
 
   .site-main {
